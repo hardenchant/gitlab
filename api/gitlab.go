@@ -27,13 +27,16 @@ import (
 	"net/url"
 	"strconv"
 	"strings"
+	"os"
 
 	"github.com/google/go-querystring/query"
 )
 
+var defaultBaseURL = os.Getenv("GITLAB_API_URL")
+
 const (
 	libraryVersion = "0.1"
-	defaultBaseURL = "https://gitlab.com/api/v3/"
+	// defaultBaseURL = "https://gitlab.com/api/v3/"
 	userAgent      = "go-gitlab/" + libraryVersion
 )
 
